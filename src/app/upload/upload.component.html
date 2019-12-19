@@ -1,0 +1,45 @@
+<app-home></app-home>
+<div id="mainBody">
+	<fieldset>
+		<legend>Candidate File Upload</legend>
+
+		<form (submit)="uploadFile($event)">
+		<input type="hidden" id="MAX_FILE_SIZE" name="MAX_FILE_SIZE"
+			value="300000" />
+		
+			<div class="form-group row">
+					<input class="col-sm-2" id="batchName"
+					placeholder="Enter BatchName" style="margin-left: 7%;">
+					</div>
+			<input
+				type="file" id="fileselect" name="file"
+				accept="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet" 
+				style="margin-left: 6%;"/>
+                        
+                <div id="filedrag">or drop files here</div>
+		<div id="btnDiv" align="center">
+			<button id="submitbutton" type="button" class="btn btn-primary" type="submit" id="submit"
+			>Upload Files</button>
+		</div>
+	</form>
+	</fieldset>
+
+	<div id="myModal" class="modal fade" role="dialog">
+		<div class="modal-dialog">
+
+			<!-- Modal content-->
+			<div class="modal-content">
+				<div class="modal-body">
+					<p>File Uploaded Successfully</p>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+				</div>
+			</div>
+
+		</div>
+	</div>
+	</div>
+	<script src="assets/js/filedrag.js"></script>
+
+<router-outlet></router-outlet>

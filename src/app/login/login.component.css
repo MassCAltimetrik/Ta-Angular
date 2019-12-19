@@ -1,0 +1,41 @@
+table {
+	border-collapse: collapse;
+	margin-top: 200px;
+}
+
+html, body {
+	height: 100%;
+	border: 0;
+	margin: 0;
+}
+
+ th, td {
+	width: 150px;
+	text-align: center;
+} 
+
+#left {
+	width: 69%;
+	height: 100%;
+	float: left;
+}
+
+#right {
+	width: 29%;
+	height: 100%;
+	float: left;
+}
+
+.customIn{
+	margin-left: 15% !important;
+}
+
+.form-control {
+	margin: 8px 8px 10px 8px;
+	width:80%;
+}
+
+#submit{
+	margin-left: 10%;
+}
+

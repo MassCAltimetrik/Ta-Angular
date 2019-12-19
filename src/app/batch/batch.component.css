@@ -1,0 +1,36 @@
+.batchDiv{
+    border-style: outset;
+    width:220px;
+    background-color: #007bff;
+    height: 40px;
+}
+#BtnDiv{
+    float: right;
+    display: block;
+}
+
+#nameDiv{
+    float: left;
+    display: block;
+    margin-left: 5px;
+}
+
+.fa{
+    color: black;
+}
+
+#collapseBtn{
+    float:right;
+    height: 30px;
+}
+
+.collapseExample{
+    width:220px;
+    overflow: scroll;
+    height: 450px;
+}
+
+.session{
+    width: 110%;
+}
+

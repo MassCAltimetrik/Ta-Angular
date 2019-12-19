@@ -1,0 +1,36 @@
+<body>
+    <nav class="navbar navbar-expand-sm bg-primary navbar-dark">
+        <ul class="navbar-nav">
+            <div class="navbar-header">
+                <a class="navbar-brand" routerLink="/batch">MaasC</a>
+            </div>
+
+            <li class="nav-item">
+                <a routerLink="/upload" class="nav-link">Upload</a>
+            </li>
+
+            <li class="nav-item">
+              <a routerLink="/batch" class="nav-link">Batch</a>
+          </li>
+
+            <li class="nav-item">
+              <a class="nav-link" routerLink="/session">Session</a>
+            </li>
+            
+              <li *ngIf="isAdmin" class="nav-item" >
+              <a routerLink="/admin" class="nav-link">Admin</a>
+          </li>
+         
+          </ul>
+
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item"><a routerLink="/login" class="nav-link"><i class="fa fa-sign-out" aria-hidden="true"> </i>
+                    Logout</a></li>
+        </ul>
+
+      </nav>
+
+    <router-outlet></router-outlet>
+
+
+    </body>

@@ -1,0 +1,41 @@
+<app-home></app-home>
+<div id="bodyDiv">
+  <div id="right">
+<h4>Allocate TA</h4>
+
+<div >
+  <div class="container">
+        <ul class="list-group list-group-flush" id="checkboxGrp" >
+                <li class="list-group-item" *ngFor="let ta of allocateTa">
+                    <input type="checkbox" id="{{ta.taId}}" (click)="change($event)">
+                    <label for="{{ta.taId}}">&nbsp;{{ta.firstName}} {{ta.lastName}}</label>
+                </li>
+              </ul>
+  </div>
+</div>
+<div >
+  <button class="btn btn-success" (click)="allocateTA($event)">
+    Allocate
+  </button>
+</div>
+</div>
+<div id="left">
+    <h4>De-Allocate TA</h4>
+
+    <div >
+      <div class="container">
+            <ul class="list-group list-group-flush" id="checkboxGrp" >
+                    <li class="list-group-item" *ngFor="let ta of deallocateTa">
+                        <input type="checkbox" id="{{ta.taId}}" (click)="changeDeallocate($event)">
+                        <label for="{{ta.taId}}">&nbsp;{{ta.firstName}} {{ta.lastName}}</label>
+                    </li>
+                  </ul>
+      </div>
+    </div>
+    <div >
+      <button class="btn btn-success" (click)="deAllocateTA($event)">
+        DeAllocate
+      </button>
+    </div>
+</div>
+</div>

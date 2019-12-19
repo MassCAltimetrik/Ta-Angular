@@ -1,0 +1,24 @@
+<div class="modal-header" id="modalSession" value="{{id}}">
+        <h4 class="modal-title">Assign Batch</h4>
+        <button type="button" class="close" aria-label="Close"
+         (click)="activeModal.dismiss('Cross click')">
+         <i class="fa fa-times" aria-hidden="true"></i>
+        </button>
+      </div>
+      
+        <div class="modal-body">
+          <div class="container">
+                <ul class="list-group list-group-flush" id="checkboxGrp" >
+                        <li class="list-group-item" *ngFor="let taObj of taArray">
+                            <input type="radio" name="ta" id="taId" value="{{taObj.taId}}" >
+                            <label for="taId">&nbsp; {{taObj.firstName}} {{taObj.lastName}}</label>
+                        </li>
+                      </ul>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button class="btn btn-success" (click)="assignTA($event)">
+            Assign
+          </button>
+        </div>
+      

@@ -1,0 +1,32 @@
+#bodyDiv{
+    margin-left: 20px;
+}
+
+.container{
+    width: 250px;
+    overflow-y: scroll;
+    height: 450px;
+   
+}
+
+.btn{
+    display: block; 
+    margin: 0 auto;
+}
+
+h4{
+    text-align: center;
+}
+
+
+#left {
+	width: 49%;
+	height: 100%;
+	float: left;
+}
+
+#right {
+	width: 49%;
+	height: 100%;
+	float: left;
+}

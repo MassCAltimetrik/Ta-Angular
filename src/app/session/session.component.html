@@ -1,0 +1,27 @@
+<app-home></app-home>
+
+<div *ngFor="let session of batchArray">
+<div style="float: left; margin-left: 1%;" id="sessionDiv{{session.sessionId}}"> 
+<div class="sessionDiv" >
+  <div id="nameDiv">
+    {{session.sessionName}}
+  </div>
+  <div id="BtnDiv">
+    <button type="button" id="{{session.sessionId}}" class="btn" (click)="deleteSession($event)">
+            <i class="fa fa-trash" aria-hidden="true"></i>
+          </button>
+          <button *ngIf="isAdmin" (click)="openFormModal($event)" id="{{session.sessionId}}">+</button>
+        </div>
+</div>
+    <div class="card">
+      <div class="card-body"> 
+          <ul class="list-group list-group-flush">
+                  <li class="list-group-item" *ngFor="let candidate of session.candidates">
+                      <label >{{candidate.firstName}}  {{candidate.lastName}}</label>
+                  </li>
+                </ul>
+      </div>
+    </div>
+</div> 
+</div>
+<router-outlet></router-outlet>

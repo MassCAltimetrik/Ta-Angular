@@ -1,0 +1,43 @@
+<app-home></app-home>
+
+<div *ngFor="let batch of batchArray">
+<div style="float: left; margin-left: 1%;" id="batchDiv{{batch.batchId}}"> 
+<div class="batchDiv" >
+ 
+  <div id="nameDiv">
+      {{batch.batchName}} 
+    </div>
+    <div id="BtnDiv">
+  <button type="button" id="collapseBtn"class="btn btn-outline-primary" (click)="isCollapsed = !isCollapsed"
+            [attr.aria-expanded]="!isCollapsed" aria-controls="{{batch.batchName}}">
+            <i class="fa fa-angle-double-down" aria-hidden="true"></i>
+    </button>
+
+    <button *ngIf="isAdmin" (click)="openFormModal($event)" id="{{batch.batchId}}">+</button>
+
+    <button type="button" id="{{batch.batchId}}" class="btn" (click)="deleteBatch($event)">
+      <i class="fa fa-trash" aria-hidden="true"></i>
+    </button>
+  </div>
+</div>
+  <div id="{{batch.batchName}}" [ngbCollapse]="isCollapsed" class="collapseExample">
+    <div class="card">
+      <div class="card-body">
+        <div>
+          <input id="sessionName{{batch.batchId}}" class="session"
+          placeholder="Enter Session Name" />
+          <button (click)="createSession($event)" id="{{batch.batchId}}" >Create</button>
+        </div>   
+          <ul class="list-group list-group-flush" id="checkboxGrp{{batch.batchId}}">
+                  <li class="list-group-item" *ngFor="let candidate of batch.candidates">
+                    <!-- Default checked -->
+                      <input type="checkbox" id="{{candidate.candidateId}}" (click)="change($event)">
+                      <label for="{{candidate.candidateId}}">{{candidate.firstName}}  {{candidate.lastName}}</label>
+                  </li>
+                </ul>
+      </div>
+    </div>
+  </div>
+</div> 
+</div>
+<router-outlet></router-outlet>

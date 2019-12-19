@@ -1,0 +1,63 @@
+
+    <router-outlet></router-outlet>
+<div class="container">
+        <div class="row">
+          <div class="col-sm">
+          </div>
+          <div class="col-sm">
+            
+<h4 class="text-center">Registration Details</h4>
+
+<form (submit)="registerUser($event)">
+<input class="form-control inputmargin" id="firstName"
+placeholder="Enter First Name"> 
+<input
+class="form-control inputmargin" id="lastName" placeholder="Enter Last Name">
+
+<input type="email" class="form-control inputmargin" id="email"
+aria-describedby="emailHelp" placeholder="Enter Email">
+
+<select class="mdb-select md-form form-control inputmargin" id="role">
+        <option value="" disabled selected>Choose Role</option>
+        <option value="ADMIN">ADMIN</option>
+        <option value="TA">TA</option>
+    </select>
+
+<input
+class="form-control inputmargin" id="mobileNumber"
+placeholder="Enter Mobile Number"> 
+
+<input type="password"
+class="form-control inputmargin" id="password" placeholder="Enter Password">
+
+<input type="password" class="form-control inputmargin" id="passwordConfirm"
+placeholder="Enter Confirm Password"> 
+
+<select class="mdb-select md-form form-control inputmargin" id="securityQ">
+        <option value="" disabled selected>Choose Security Question</option>
+        <option value="1">What was your childhood nickname?</option>
+        <option value="2">What school did you attend for sixth grade?</option>
+        <option value="3">In what city does your nearest sibling live?</option>
+        <option value="4">In what city or town was your first job?</option>
+        <option value="5">What was the name of your elementary / primary school?</option>
+        <option value="6">What was your favorite place to visit as a child?</option>  
+        <option value="7">Who was your childhood hero?</option>
+        <option value="8">What is your preferred musical genre?</option>
+        <option value="9">What was your dream job as a child?</option>
+    </select>
+
+<input type="password"
+class="form-control inputmargin" id="securityQAns"
+placeholder="Enter Security Question's Answer">
+
+<div class="text-center">
+<button type="submit" class="btn btn-primary inputmargin "
+>Register</button>
+</div>
+</form>
+          </div>
+          <div class="col-sm">
+          </div>
+        </div>
+      </div>
+
